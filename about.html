@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+    <style>
+        /* Add your custom styles for the About page here */
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+#about-section {
+            background-color: #f9f9f9; /* Light background color */
+            border: 50px solid #ddd; /* Thin grey border around the element */
+            padding: 50px; /* Add some padding for nicer appearance */
+            margin: 20px auto; /* Center align the element */
+            max-width: 800px; /* Maximum width of the box */
+            font-family: 'Zhi Mang Xing', cursive; /* Use cursive font */
+        }
+        /* other styles... */
+        html, body, #app {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            font-size: 0;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+       #app {
+            width: 100%;
+            height: 100vh; /* Set the height to fill the viewport */
+            background-color: #ffcccc;
+            overflow: auto; /* Make sure your content is scrollable if it exceeds the viewport height */
+        }
+        #app img {
+            display: block;
+            margin: 0 auto; /* Center the images horizontally */
+        }
+
+        #detail {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: #111;
+            top: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-evenly;
+        }
+
+        #detailImg {
+            width: 85%;
+            height: 85%;
+        }
+
+        #detailTxt {
+            color: #ccc;
+            font-size: 20px;
+            letter-spacing: 1px;
+        }
+
+        svg {
+            pointer-events: none;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        #headlines {
+            max-width: 800px;
+            min-width: 450px;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+        body {
+            font-family: 'Raleway', sans-serif;
+        }
+        .about-content {
+            text-align: center;
+            padding: 50px;
+        }
+        .about-content p {
+            color: #333; /* Change the text color to black */
+            font-size: 18px; /* Change the font size */
+            line-height: 1.6; /* Adjust the line height for better readability */
+        }
+
+        /* Slideshow styles */
+        .slideshow-container {
+            max-width: 1000px;
+            position: relative;
+            margin: auto;
+        }
+
+        .mySlides {
+            display: none;
+            animation-name: fade;
+            animation-duration: 2s;
+        }
+
+        @keyframes fade {
+            from {
+                opacity: 0.4;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+  <div id="app">
+        <div class="about-content">
+            <!-- your About us content -->
+        </div>
+    <div id="app">
+      
+    <!-- navigation and other content here... -->
+    
+    <div id="about-section" role="complementary" aria-labelledby="About Us">
+        <h1>About Us</h1>
+    <div class="about-content">
+        <h1>About Us</h1>
+        <p>This is the About me page content.</p>
+        <p>Hello everyone!I am Urjaswi Banerjee.I was born on 9th April,2004.I completed my schooling from South Point School,Kolkata,WestBengal in India.</p>
+        <p>Vestibulum eleifend eget sapien nec feugiat. Fusce ullamcorper tellus sit amet hendrerit bibendum. Integer ac erat nunc. Sed sit amet sagittis massa. Duis eget congue arcu. Quisque consectetur elementum lacus, nec porttitor tortor venenatis nec. Quisque aliquet libero nec hendrerit varius. Integer ac urna elit. Proin ac nisi at sem hendrerit fringilla nec non erat.</p>
+    </div>
+
+    <div class="slideshow-container">
+        <div class="mySlides fade">
+            <img src="testimage.jpg.jpg" alt="Slide 1">
+        </div>
+
+        <div class="mySlides fade">
+            <img src="https://e1.pxfuel.com/desktop-wallpaper/605/967/desktop-wallpaper-outdoor-natural-studio-backgrounds-nature-background.jpg" alt="Slide 2">
+        </div>
+
+        <div class="mySlides fade">
+            <img src="https://via.placeholder.com/500" alt="Slide 3">
+        </div>
+        <!-- Add more slides as needed -->
+    </div>
+
+    <script>
+        let slideIndex = 0;
+        showSlides();
+
+        function showSlides() {
+            let slides = document.getElementsByClassName("mySlides");
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) {
+                slideIndex = 1;
+            }
+            slides[slideIndex - 1].style.display = "block";
+            setTimeout(showSlides, 2000); // Change slide every 2 seconds
+        }
+    </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js"></script>
+
+    <script>
+        // The previous GSAP and other JavaScript code...
+        // ...
+    </script>
+
+</body>
+</html>
