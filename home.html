@@ -8,9 +8,9 @@
     <style>
         body {
             font-family: 'Raleway', sans-serif;
-            /* Updated to radial gradient with shades of red */
-            background: radial-gradient(circle, #FF6666 0%, #E63232 70%, #800000 100%);
-            color: #fff;
+            /* Updated to radial gradient with softer shades */
+            background: radial-gradient(circle, #FFDDDD 0%, #FF9999 70%, #FFCCCC 100%);
+            color: #333; /* Slightly darker color for contrast against bright background */
         }
         .home-content {
             text-align: center;
@@ -31,18 +31,32 @@
         .project-item {
             margin-bottom: 30px;
             padding: 20px;
-            background: rgba(255, 255, 255, 0.1); /* semi-transparent white */
+            background: rgba(255, 255, 255, 0.3); /* Lighter semi-transparent white */
             border-radius: 10px;
-            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1); /* subtle shadow */
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+            animation: fadein 2s;
+        }
+        .project-item h3 {
+            font-size: 1.5rem;
+            font-weight: 600;
         }
         .project-item a {
-            color: #fff;
+            display: inline-block;
+            color: #333;
             text-decoration: none;
-            border-bottom: 2px solid #fff;
+            margin-top: 1rem;
+            padding: 10px 20px;
+            background: rgba(204, 204, 204, 0.3); /* Lighter shade for more contrast */
+            border-radius: 5px;
+            transition: all 0.3s ease;
         }
         .project-item a:hover {
-            color: #FF6666;
-            border-color: #FF6666;
+            color: #FF9999; /* The hover color is now a shade from our background */
+            background: rgba(204, 204, 204, 0.5);
+        }
+        @keyframes fadein {
+            from { opacity: 0; }
+            to   { opacity: 1; }
         }
     </style>
 </head>
@@ -59,7 +73,7 @@
         <!-- Project 1 -->
         <div class="project-item">
             <h3>Project 1</h3>
-            <p>For this project i built a working calculator using html and css.Click below to see the project.</p>
+            <p>For this project i built a working calculator using HTML and CSS.Click below to see the project</p>
             <a href="project1.html">View Project</a>
         </div>
         
