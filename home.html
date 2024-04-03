@@ -9,8 +9,8 @@
     <style>
         body {
             font-family: 'Comfortaa', cursive;
-            background: #f6e0b3;
-            color: #704e37;
+            background: linear-gradient(to right, #0080BF, #00ACDF, #55D0FF, #7CE8FF, #CCF9FF);
+            color: #454545; /* Text color from the specified palette */
             transition: all 0.5s ease;
         }
         .home-content {
@@ -19,12 +19,16 @@
         }
         h1 {
             font-size: 2.5rem;
-            text-shadow: 2px 2px #e9dab1;
             margin-bottom: 1rem;
+            color: #454545; /* Text color from the specified palette */
+            background: linear-gradient(to left, #0080BF, #00ACDF, #55D0FF, #7CE8FF, #CCF9FF);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
         p {
             font-size: 1.2rem;
             font-family: 'Courgette', cursive;
+            color: #707070; /* Text color from the specified palette */
         }
         .projects {
             margin: 50px auto;
@@ -33,22 +37,26 @@
         }
         h2 {
             font-family: 'Comfortaa', cursive;
+            color: #9A9A9A; /* Text color from the specified palette */
+            background: linear-gradient(to left, #454545,#707070,#9A9A9A,#D4D4D4,#E9E9E9);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
         .project-item {
-            background: #ffedcf;
+            background: #d9eefb;
             border-radius: 5px;
             padding: 15px;
             margin-top: 10px;
             animation: fadeIn 2s;
         }
         .project-item h3 {
-            color: #704e37;
+            color: #D4D4D4;
             font-size: 1.5em;
             font-family: 'Comfortaa', cursive;
         }
         .project-item a {
             display: inline-block;
-            color: #704e37;
+            color: #D4D4D4;
             text-decoration: none;
             padding: 10px 20px;
             background: #f3cab5; 
@@ -57,8 +65,8 @@
             transition: all 0.3s ease;
         }
         .project-item a:hover {
-            color: #fff; 
-            background: #efa985;
+            color: #E9E9E9; /* Text color from the specified palette */
+            background: #7CE8FF; /* Light blue background on hover */
         }
         @keyframes fadeIn {
             from {
@@ -142,7 +150,7 @@
     .work { margin: 50px auto; max-width: 600px; }
 
     .work-item {
-        background: #f9eac8;
+        background: #d9eefb;
         border-radius: 5px;
         padding: 15px;
         margin-top: 20px;
@@ -152,7 +160,7 @@
     .work-item h3 {
         font-family: 'Comfortaa', cursive;
         font-size: 1.5em;
-        color: #704e37;
+        color: #D4D4D4;
     }
 </style>
         <!-- Add more projects as needed... -->
