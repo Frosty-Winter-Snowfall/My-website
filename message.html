@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>From Sreyasi</title>
+    <link rel="stylesheet" type="text/css" href="style.css">        
+    <style>
+        body {
+            background: radial-gradient(circle at center, #ed75bb, #ee358e);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin:0;
+            padding: 0;
+            border-left: 0px #ee358e;
+            
+            position: relative;
+            
+        }
+        #main-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  margin:0;
+  
+  
+}
+        .heart {
+            background-color:red;
+            height: 100px;
+            width:100px;
+            margin:100px;
+            animation: beat 1s infinite alternate;
+       }
+       .heart:before,
+       .heart:after {
+            content:'';
+            background-color:rgb(252, 5, 5);
+            position:absolute;
+            height: 100px;
+            width:100px;
+            border-radius :50%; }
+       .heart:before { left:50px;
+                      top:0;
+
+       }
+       .heart:after { top:-50px;
+                      left:0;
+
+       }
+    @keyframes beat{ 
+        0%{transform:scale(1) rotate(-45deg);}
+        100%{transform:scale(1.5) rotate(-45deg);}
+    }
+        
+
+        
+        #loveButton, #nahButton {
+            padding: 10px 20px;
+            border: none;
+            color: white;
+            background-color: red;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: font-size 0.3s;
+            z-index:999; 
+        }
+        .confetti {
+            max-width:fit-content;
+            display: block;
+            margin: 0 auto;
+            border: 1px solid #ddd;
+            user-select: none;
+        }
+        @keyframes bang {
+            from {
+                transform: translate3d(0,0,0);
+                opacity: 1;
+            }
+        }
+        .hoverme {
+            width: 240px;
+            margin:150px auto 0;
+            text-align: center;
+            padding: 10px 0;
+            cursor: pointer;
+            position: relative;
+        }
+        .hoverme span {
+            color: #333;
+            font-size: .9em;
+        }
+        .hoverme i {
+            position: absolute;
+            display: block;
+            left: 50%;
+            top: 0;
+            width: 3px;
+            height: 8px;
+            background: red;
+            opacity: 0;
+        }
+   
+        canvas {
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -1;
+        }
+       
+.bg_heart {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+ 
+  
+  
+}
+
+.heart_bg {
+  background-color: rgb(255, 0, 0);;
+
+  height: 30px;
+ 
+  position: absolute;
+
+  width: 30px;
+  rotate:-45deg;
+  animation: float 4s infinite linear;
+}
+
+.heart_bg:before,
+.heart_bg:after {
+  content: "";
+  background-color: rgb(255, 0, 0);
+  border-radius: 50%;
+  height: 30px;
+  position: absolute;
+  width: 30px;
+  
+}
+
+.heart_bg:before {
+  top: -15px;
+  left: 0;
+  
+}
+
+.heart_bg:after {
+  left: 15px;
+  top: 0;
+  
+}
+.heart_bg:nth-child(1) {
+    top: 20%;
+    left: 10%;
+    /* rotate:-45deg; */
+ 
+}
+
+.heart_bg:nth-child(2) {
+  top: 70%;
+  left: 30%;
+  /* rotate:-45deg; */
+}
+
+.heart_bg:nth-child(3) {
+  top: 50%;
+  left: 60%;
+  /* rotate:-45deg; */
+}
+
+.heart_bg:nth-child(4) {
+  top: 10%;
+  left: 80%;
+  
+}
+.heart_bg:nth-child(5) {
+            top: 30%;
+            left: 20%;
+        }
+
+        .heart_bg:nth-child(6) {
+            top: 60%;
+            left: 40%;
+        }
+
+        .heart_bg:nth-child(7) {
+            top: 40%;
+            left: 70%;
+        }
+
+        .heart_bg:nth-child(8) {
+            top: 15%;
+            left: 90%;
+        }
+        .heart_bg:nth-child(9) {
+            top: 85%;
+            left: 90%;
+        }
+        .heart_bg:nth-child(10) {
+            top: 85%;
+            left: 10%;
+        }
+        .heart_bg:nth-child(11) {
+            top: 55%;
+            left: 90%;
+        }
+        .heart_bg:nth-child(12) {
+            top: 55%;
+            left: 10%;
+        }
+        .heart_bg:nth-child(13) {
+            top: 45%;
+            left: 30%;
+        }
+        .heart_bg:nth-child(14) {
+            top: 65%;
+            left: 80%;
+        }
+
+
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-50px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+#messageBox {
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 2px solid red;
+  padding: 20px;
+  border-radius: 10px;
+  margin-top: 20px;
+  margin-left:50px;
+  margin-right:50px;
+}
+
+    </style>
+</head>
+<body>
+    <main id="main-container" aria-label="Container for proposal interactive element">
+        <div class='heart' aria-label='Animated heart icon'></div>
+        <div class="bg_heart">
+            <div class="heart_bg"></div>
+            <div class="heart_bg"></div>
+            <div class="heart_bg"></div>
+            <div class="heart_bg"></div>
+            <div class="heart_bg"></div> <!-- New heart -->
+            <div class="heart_bg"></div> <!-- New heart -->
+            <div class="heart_bg"></div> <!-- New heart -->
+            <div class="heart_bg"></div> <!-- New heart -->
+            <div class="heart_bg"></div> <!-- New heart -->
+            <div class="heart_bg"></div> <!-- New heart --> 
+            <div class="heart_bg"></div> <!-- New heart --> 
+            <div class="heart_bg"></div> <!-- New heart --> 
+            <div class="heart_bg"></div> <!-- New heart -->
+            <div class="heart_bg"></div> <!-- New heart -->
+        </div>
+        <div id="messageBox">
+            Sotti bolte Ami onek din dhore bhabchi ata niye...please aita jeno kauke bolo na...I request...It has been more than 1 year... I thought this feeling will fade away with time... But it is constant... Ami beshi kichu bolte parchi na karon akta odhbhut feeling kaj korche... Amar tomake bhalo lage... Asha kori ki bolte cheyechi bujhte perecho... Jani hoyto tumi er por theke kotha bola bondho kore debe... I wanted to share it... Bakita purota tomar opor... Aktai request keu jeno na jante pare... Ai request ta rekho
+        <!-- Will you be my Valentine? -->
+        </div>
+        <button class='hoverme' id="loveButton" onclick="showConfetti()" aria-label="Option to accept the proposal">I like you too</button>
+        <br>
+        <button id="nahButton" onclick="increaseSize()" aria-label="Option to decline the proposal">Nah, I see you as a friend/sister</button>
+    </main> 
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="script.js"></script>
+    <script src="confetti.js"></script>
+    <script>
+        x=0
+        function increaseSize() {
+        x++;
+        let loveButton = document.getElementById('loveButton');
+        let newSize = parseInt(window.getComputedStyle(loveButton).fontSize);
+        newSize = newSize + (5 * x);
+        loveButton.style.fontSize = newSize + 'px';
+        alert('Are you sure?I will be hurt....');
+    }
+    
+    </script>
+    
+    
+    <script>
+        $('button').on('click', function(){  
+            function random(max){
+                return Math.random() * (max - 0) + 0;
+            }
+
+            var c = document.createDocumentFragment();
+            for (var i=0; i<100; i++) {
+                var styles = 'transform: translate3d(' + (random(500) - 250) + 'px, ' + (random(200) - 150) + 'px, 0) rotate(' + random(360) + 'deg);\
+                            background: hsla('+random(360)+',100%,50%,1);\
+                            animation: bang 700ms ease-out forwards;\
+                            opacity: 0';
+
+                var e = document.createElement("i");
+                e.style.cssText = styles.toString();
+                c.appendChild(e);
+            }
+            $(this).append(c);
+        })
+    </script>
+    <script>
+        var canvas = document.querySelector("canvas");
+        var ctx = canvas.getContext("2d");
+        function drawHeart(x, y, size, color) {
+            ctx.beginPath();
+            ctx.fillStyle = color;
+            ctx.moveTo(x, y + size / 4);
+            ctx.quadraticCurveTo(x, y, x + size / 4, y);
+            ctx.quadraticCurveTo(x + size / 2, y, x + size / 2, y + size / 4);
+            ctx.quadraticCurveTo(x + size / 2, y, x + size * 3/4, y);
+            ctx.quadraticCurveTo(x + size, y, x + size, y + size / 4);
+            ctx.quadraticCurveTo(x + size * 3/4, size + y / 2, x + size / 2, size + y / 2);
+            ctx.quadraticCurveTo(x + size / 4, y + size / 2, x, y + size / 4);
+            ctx.fill();
+        }
+
+        // Modify the animate function
+        function animate() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            var x = Math.random() * canvas.width;
+            var y = Math.random() * canvas.height;
+            var size = Math.random() * 50 + 25;
+            var colors = ['rgba(233, 30, 30, 0.9)', 'rgba(255, 87, 87, 0.9)', 'rgba(224, 64, 64, 0.9)'];
+            var color = colors[Math.floor(Math.random() * colors.length)];
+            drawHeart(x, y, size, color);
+            requestAnimationFrame(animate);
+        }
+
+        animate();
+    </script>
+</body>
+</html>
