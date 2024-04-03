@@ -24,6 +24,7 @@
             background: linear-gradient(to left, #0080BF, #00ACDF, #55D0FF, #7CE8FF, #CCF9FF);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
+            animation: fadeInDown 2s;
         }
         p {
             font-size: 1.2rem;
@@ -34,6 +35,7 @@
             margin: 50px auto;
             text-align: center;
             max-width: 600px;
+            animation: fadeInUp 2s;
         }
         h2 {
             font-family: 'Comfortaa', cursive;
@@ -41,13 +43,14 @@
             background: linear-gradient(to left, #454545,#707070,#9A9A9A,#D4D4D4,#E9E9E9);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
+            animation: fadeInDown 2s;
         }
         .project-item {
             background: #d9eefb;
             border-radius: 5px;
             padding: 15px;
             margin-top: 10px;
-            animation: fadeIn 2s;
+            animation: fadeInDown 2s;
         }
         .project-item h3 {
             color: #4e5758e5;
@@ -63,6 +66,7 @@
             border-radius: 5px;
             font-family: 'Courgette', cursive;
             transition: all 0.3s ease;
+            
         }
         .project-item a:hover {
             color: #E9E9E9; /* Text color from the specified palette */
@@ -74,6 +78,26 @@
             }
             to {
                 opacity: 1;
+            }
+        }
+         @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
             }
         }
     </style>
@@ -161,6 +185,7 @@
         font-family: 'Comfortaa', cursive;
         font-size: 1.5em;
         color: #4e5758e5;
+        animation: fadeInDown 2s;
     }
 </style>
         <!-- Add more projects as needed... -->
