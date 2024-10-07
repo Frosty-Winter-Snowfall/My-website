@@ -6,58 +6,71 @@
     <title>About</title>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;700&display=swap" rel="stylesheet">
     <style>
-               
-                 body, html, #app {
-                     font-family: 'Montserrat', sans-serif;
-                   background: linear-gradient(to right, #0080BF, #00ACDF, #55D0FF, #7CE8FF, #CCF9FF);  /* Light grey background */
-                     color: #454545;  /* Dark grey for default text */
-                 }
+          @keyframes fadeInDown {
+                           from {
+                               opacity: 0;
+                               transform: translateY(-20px);
+                           }
+                           to {
+                               opacity: 1;
+                               transform: translateY(0);
+                           }
+                       }
 
-                 h1 {
-                   text-align: center;
-                     font-size: 2.5em;
-                     font-weight: bold;
-                     text-shadow: 2px 2px #707070;  /* Subtle shadow for the header */
-                     color: #0080BF;  /* Deep electric blue for the headings */
-                 }
+                       body, html, #app {
+                           font-family: 'Montserrat', sans-serif;
+                           background: linear-gradient(to right, #0080BF, #00ACDF, #55D0FF, #7CE8FF, #CCF9FF);
+                           color: #454545;
+                       }
 
-                 #about-section {
-                     padding: 50px;
-                     max-width: 800px;
-                     margin: 0 auto;
-                     border: 1px solid #00ACDF;  /* Medium blue for borders */
-                     border-radius: 20px;
-                   background: linear-gradient(to right, #0080BF, #00ACDF, #55D0FF, #7CE8FF, #CCF9FF);  /* Lightest blue for the background of the section */
-                 }
+                       h1 {
+                           text-align: center;
+                           font-size: 2.5em;
+                           font-weight: bold;
+                           text-shadow: 2px 2px #707070;
+                           color: #0080BF;
+                           animation: fadeInDown 2s; /* Animation for the heading */
+                       }
 
-                 #about-section:hover {
-                     box-shadow: 0 0 10px 5px #55D0FF;  /* Light blue shadow on hover */
-                 }
+                       #about-section {
+                           padding: 50px;
+                           max-width: 800px;
+                           margin: 0 auto;
+                           border: 1px solid #00ACDF;
+                           border-radius: 20px;
+                           background: linear-gradient(to right, #0080BF, #00ACDF, #55D0FF, #7CE8FF, #CCF9FF);
+                           animation: fadeInDown 2s; /* Apply fade-in animation */
+                           transition: box-shadow 0.3s ease; /* Smooth transition for hover effect */
+                       }
 
-                 .about-content {
-                     margin-bottom: 20px;
-                     padding: 20px;
-                     box-shadow: 0px 0px 5px #9A9A9A;  /* Soft grey shadow */
-                     transition: 0.3s;
-                 }
+                       #about-section:hover {
+                           box-shadow: 0 0 10px 5px #55D0FF; /* Light blue shadow on hover */
+                       }
 
-                 .about-content:hover {
-                     box-shadow: 0px 0px 10px #707070; 
-                 }
+                       .about-content {
+                           margin-bottom: 20px;
+                           padding: 20px;
+                           box-shadow: 0px 0px 5px #9A9A9A;
+                           transition: all 0.3s ease;
+                       }
 
-                 .certificate-slideshow {
-                     max-width: 800px;
-                     margin: 0 auto;
-                     background: #F0F0F0;  /* Slightly darker grey for the slideshow background */
-                     border-radius: 20px;
-                     border: 1px solid #00ACDF;
-                     padding: 20px;
-                     transition: 0.3s;
-                 }
+                       .about-content:hover {
+                           box-shadow: 0px 0px 10px #707070; 
+                       }
 
-                 .certificate-slideshow:hover {
-                     box-shadow: 0 0 10px 5px #7CE8FF;  /* Bright hover shadow */
-                 }
+                       .certificate-slideshow {
+                           max-width: 800px;
+                           margin: 0 auto;
+                           background: #F0F0F0;
+                           border-radius: 20px;
+                           border: 1px solid #00ACDF;
+                           padding: 20px;
+                           transition: 0.3s;
+                       }
+
+                       .certificate-slideshow:hover {
+                           box-shadow: 0 0 10px 5px #7CE8FF; /* Bright hover shadow */
+                       }
 
     </style>
 </head>
@@ -133,24 +146,24 @@
             </div>
         </section>
     </div>
-    <script>
-        var slideIndex = 0;
-        showSlides(slideIndex);
+                   <script>
+                   var slideIndex = 0;
+                   showSlides(slideIndex);
 
-        function changeSlide(n) {
-            showSlides(slideIndex += n);
-        }
+                   function changeSlide(n) {
+                       showSlides(slideIndex += n);
+                   }
 
-        function showSlides(n) {
-            var i;
-            var slides = document.getElementsByClassName("mySlides");
-            if (n >= slides.length) {slideIndex = 0;}
-            if (n < 0) {slideIndex = slides.length - 1;}
-            for (i = 0; i < slides.length; i++) {
-               slides[i].style.display = "none";  
-            }
-            slides[slideIndex].style.display = "block";  
-        }
-    </script>  <!-- Your existing HTML body... -->
+                   function showSlides(n) {
+                       var i;
+                       var slides = document.getElementsByClassName("mySlides");
+                       if (n >= slides.length) { slideIndex = 0; }
+                       if (n < 0) { slideIndex = slides.length - 1; }
+                       for (i = 0; i < slides.length; i++) {
+                           slides[i].style.display = "none";  
+                       }
+                       slides[slideIndex].style.display = "block";  
+                   }
+               </script>
 </body>
 </html>
